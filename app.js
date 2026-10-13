@@ -12,9 +12,8 @@ const routes = [
 ];
 
 const courses = [
-  {name:'Statistics for Data Science II', code:'MA1004', path:'ns_26t2_ma1004'},
-  {name:'Mathematics for Data Science II', code:'MA1003', path:'ns_26t2_ma1003'},
-  {name:'English II', code:'HS1002', path:'ns_26t2_hs1002'},
+  {name:'Machine Learning Foundations', code:'', path:'ns_26t2_ma1004'},
+  {name:'Machine Learning Techniques', code:'', path:'ns_26t2_ma1003'},
 ];
 
 const updates = [
@@ -30,7 +29,7 @@ const courseScores = [
 ];
 
 const documents = [
-  ['ADMISSION_LETTER','Admission Letter','assets/documents/admission-letter.pdf'],['IITM_ID_CARD','Student Identity Card-2026','assets/documents/student-identity-card.pdf'],['RECEIPT','Receipt of payment - F1-2026','assets/documents/payment-receipt-f1-2026.pdf'],['RECEIPT','F3-2025 FEE RECEIPT (QUALIFIER)','assets/documents/fee-receipt-f3-2025-qualifier.pdf'],['RECEIPT','Receipt of payment - F2-2026','assets/documents/payment-receipt-f2-2026.pdf'],['TERMWISE_PROGRESS_CARD','2026 January Progress Card','assets/documents/progress-card-january-2026.pdf'],['TERMWISE_PROGRESS_CARD','2025 September Progress Card','assets/documents/progress-card-september-2025.pdf'],
+	['ADMISSION_LETTER','Admission Letter','assets/documents/admission-letter.pdf'],['IITM_ID_CARD','Student Identity Card-2026','assets/documents/student-identity-card.pdf'],['RECEIPT','Receipt of payment - F1-2026','assets/documents/payment-receipt-f1-2026.pdf'],['RECEIPT','F3-2025 FEE RECEIPT (QUALIFIER)','assets/documents/fee-receipt-f3-2025-qualifier.pdf'],['RECEIPT','Receipt of payment - F2-2026','assets/documents/payment-receipt-f2-2026.pdf'],['RECEIPT','Receipt of payment - F3-2026','assets/documents/payment-receipt-f3-2026.pdf'],['TERMWISE_PROGRESS_CARD','2026 May Progress Card','assets/documents/progress-card-may-2026.pdf'],['TERMWISE_PROGRESS_CARD','2026 January Progress Card','assets/documents/progress-card-january-2026.pdf'],['TERMWISE_PROGRESS_CARD','2025 September Progress Card','assets/documents/progress-card-september-2025.pdf'],
 ];
 
 function currentRoute(){
@@ -58,7 +57,7 @@ function badge(label,kind='assessment',small=false){
 function courseTiles(){return courses.map(c=>`<article class="course-tile"><div class="course-title">${esc(c.name)}</div><a class="course-expand" href="https://seek.study.iitm.ac.in/courses/${c.path}">More Details <span>⌄</span></a></article>`).join('');}
 function dashboard(){return `<div class="dashboard-top">
   <section class="updates-column" aria-label="Latest updates"><div class="updates-tabs" role="tablist"><button class="tab-button active" data-tab="latest" role="tab">Latest Updates</button><button class="tab-button" data-tab="search" role="tab">SEARCH</button><button class="tab-button" data-tab="starred" role="tab">VIEW STARRED UPDATES</button></div><div class="updates-panel"><input class="search-input update-search" placeholder="Search updates..." aria-label="Search updates" hidden />${updateCards()}<div class="update-empty" hidden>No updates match your search.</div><a class="text-link older-link" data-route="/student_dashboard/latest_updates" href="#/student_dashboard/latest_updates">View older update &gt;</a></div></section>
-  <section class="term-column"><h1 class="term-heading">MAY 2026 TERM</h1><p class="term-date">28 Sept 2026</p><div class="course-grid">${courseTiles()}</div><a class="current-courses-link" href="#/student_dashboard/current_courses" data-route="/student_dashboard/current_courses">Go to My Current Courses Page &gt;</a><a class="drop-courses-link" href="#">Drop Courses Form &gt;<small>Last date to drop courses:</small></a></section>
+  <section class="term-column"><h1 class="term-heading">SEPTEMBER 2026 TERM</h1><p class="term-date">13 Oct 2026</p><div class="course-grid">${courseTiles()}</div><a class="current-courses-link" href="#/student_dashboard/current_courses" data-route="/student_dashboard/current_courses">Go to My Current Courses Page &gt;</a><a class="drop-courses-link" href="#">Drop Courses Form &gt;<small>Last date to drop courses:</small></a></section>
 </div>
 <div class="dashboard-cards">
   <div class="dashboard-card-column">
@@ -71,7 +70,7 @@ function dashboard(){return `<div class="dashboard-top">
     <section class="dash-card documents-card"><div class="dash-card-heading"><h2>Certificates and Documents</h2></div><div class="dash-card-body"><p>To view and download certificates earned so far, mark transcripts.</p><a href="#/student_dashboard/student_certificates" data-route="/student_dashboard/student_certificates">Certificates Page &gt;</a></div><div class="dash-card-body"><p>To view and download other documents for download such as student handbook.</p><a href="#/student_dashboard/student_documents" data-route="/student_dashboard/student_documents">Documents for Download Page &gt;</a></div><div class="dash-card-body"><p>To review all documents already submitted</p><a href="#/student_dashboard/submitted_forms_and_receipt" data-route="/student_dashboard/submitted_forms_and_receipt">Submitted Documents Page &gt;</a></div></section>
   </div>
 </div>${footer()}`;}
-function currentCourses(){return `<div class="course-page-heading"><div class="course-page-date"><strong>13 October, 2026</strong><small>SEPTEMBER 2026 TERM</small></div><h1>My Current Courses</h1><p>Cumulative Grade Point Average (CGPA) till this term - <strong>9.00</strong></p></div><div class="score-cards"><article class="score-card"><header><h2>Machine Learning Techniques</h2><small>NEW COURSE</small><p>BS in Data Science and Applications</p></header><div class="score-list"><a href="https://seek.onlinedegree.iitm.ac.in/courses/ns_26t3_ma1004">Go to Course page &gt;</a></div></article></div>${footer()}`;}
+function currentCourses(){return `<div class="course-page-heading"><div class="course-page-date"><strong>13 October, 2026</strong><small>SEPTEMBER 2026 TERM</small></div><h1>My Current Courses</h1><p>Cumulative Grade Point Average (CGPA) till this term - <strong>9.00</strong></p></div><div class="score-cards"><article class="score-card"><header><h2>Machine Learning Techniques</h2><small>NEW COURSE</small><p>BS in Data Science and Applications</p></header><div class="score-list"><a href="https://seek.onlinedegree.iitm.ac.in/courses/ns_26t3_ma1004">Go to Course page &gt;</a></div></article><article class="score-card"><header><h2>Machine Learning Foundations</h2><small>NEW COURSE</small><p>BS in Data Science and Applications</p></header><div class="score-list"><a href="https://seek.onlinedegree.iitm.ac.in/courses/ns_26t3_ma1004">Go to Course page &gt;</a></div></article></div>${footer()}`;}
 function renderHistory(){const completed=[['English II','A'],['English I','S'],['Mathematics for Data Science I','C'],['Mathematics for Data Science II','B'],['Statistics for Data Science I','S'],['Computational Thinking','B'],['Programming in Python','S']];const current=[['Statistics for Data Science II','S'],['Mathematics for Data Science II','B'],['English II','A']];return `<div class="history-list"><h1>Program: BS In Data Science And Applications (Active)</h1><h2>Foundational Level Courses</h2><h3>COMPLETED COURSES</h3>${completed.map(([n,g])=>`<div class="history-course"><a href="#">${n}</a><span>Grade Letter: ${g}</span></div>`).join('')}<h3>CURRENT COURSES</h3>${current.map(([n,g])=>`<div class="history-course"><a href="#">${esc(n)}</a><span>Grade Letter: ${g}</span></div>`).join('')}</div>${footer()}`;}
 function profile(){
  const types=['topper','assessment','topper','assessment','topper','topper','assessment','assessment'];
